@@ -1,0 +1,4 @@
+Parent[3692]:Open log file(fd=3)
+Parent[4740]:Open log file(fd=3)
+Child[4741]:fd(3):Test fd.
+Parent[4754]:Open log file(fd=3)
