@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: devfun.bookstore.common.mapper.BookMapperTest
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.095 sec - in devfun.bookstore.common.mapper.BookMapperTest
