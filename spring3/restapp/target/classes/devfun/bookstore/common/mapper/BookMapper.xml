@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="devfun.bookstore.common.mapper.BookMapper">
+
+    <resultMap id="BaseResultMap" type="devfun.bookstore.common.domain.Book">
+        <id     column="ID"         jdbcType="BIGINT"       property="id"/>
+        <result column="TITLE"      jdbcType="VARCHAR"      property="title"/>
+        <result column="CREATOR"    jdbcType="VARCHAR"      property="creator"/>
+        <result column="TYPE"       jdbcType="VARCHAR"      property="type"/>
+        <result column="DATE"       jdbcType="TIMESTAMP"    property="date"/>
+    </resultMap>
+
+    <select id="select" resultMap="BaseResultMap">
+        SELECT ID, TITLE, CREATOR, TYPE, DATE
+            FROM BOOK
+    </select>
+
+    <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+        SELECT ID, TITLE, CREATOR, TYPE, DATE
+            FROM BOOK
+        WHERE ID=#{id, jdbcType=BIGINT}
+    </select>
+
+    <insert id="insert" parameterType="devfun.bookstore.common.domain.Book">
+        INSERT INTO BOOK(ID, TITLE, CREATOR, TYPE, DATE)
+            VALUES( #{id}, #{title}, #{creator}, #{type}, #{date})
+    </insert>
+
+    <update id="updateByPrimaryKey"  parameterType="devfun.bookstore.common.domain.Book">
+        UPDATE book SET TITLE=#{title}, CREATOR=#{creator}, TYPE=#{type}, DATE=#{date} WHERE ID=#{id}
+    </update>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+        DELETE FROM book WHERE ID = #{id, jdbcType=BIGINT}
+    </delete>
+</mapper>
+
