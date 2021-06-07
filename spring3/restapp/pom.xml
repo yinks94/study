@@ -17,7 +17,7 @@
 
     <!-- Logging -->
     <version.slf4j>1.7.5</version.slf4j>
-    <version.logback>1.0.13</version.logback>
+    <version.logback>1.2.0</version.logback>
 
     <!-- Spring -->
     <version.spring>3.2.18.RELEASE</version.spring>
